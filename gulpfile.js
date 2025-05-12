@@ -54,11 +54,11 @@ function images() {
 
 function styles() {
   return src('app/scss/*.scss')
-    .pipe(autoprefixer())
-    .pipe(concat('style.min.css'))
     .pipe(scss({
       style: 'compressed'
     }))
+    .pipe(concat('style.min.css'))
+    .pipe(autoprefixer())
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }

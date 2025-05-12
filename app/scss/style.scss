@@ -12,6 +12,7 @@ body {
 
 .header {
   padding: 37px 0 25px;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -21,21 +22,39 @@ body {
     font-size: 16px;
     color: vars.$color-primary;
   }
+
   &__logo {
     width: 100%;
     text-align: center;
     margin-bottom: 32px;
   }
+
   &__lang {
     display: flex;
-    &--active {
-      @extend %opensans-700;
-    }
   }
+
+  &__lang-link--active {
+    @extend %opensans-700;
+  }
+
   &__actions {
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+
+  &__actions-link {
+    outline: none;
+
+    svg {
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      transform: scale(1.15);
+    }
   }
 }
 
@@ -49,5 +68,202 @@ body {
     align-items: center;
     gap: 30px;
   }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    outline: none;
+
+    &::before {
+      content: attr(data-text);
+      font-weight: 700;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    &:hover::before,
+    &:active::before,
+    &:focus::before {
+      opacity: 1;
+    }
+  }
 }
 
+.footer {
+  background-color: #0F2B41;
+  font-size: 16px;
+  color: vars.$color-text-add;
+
+  a:focus {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  &__menu {
+    padding: 55px 0 60px;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    margin-bottom: 50px;
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__menu-link {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.35);
+      opacity: 0;
+      transform: translateY(1px);
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.35);
+
+      &::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &:focus {
+      color: rgba(255, 255, 255, 0.35);
+
+      &::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.35);
+
+      &::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__elements {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  &__element-title {
+    opacity: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__element-item {
+    margin-bottom: 5px;
+  }
+
+  &__form {
+    width: 253px;
+    position: relative;
+  }
+
+  &__form-input {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 1px 30px 5px 0;
+    background-color: #0F2B41;
+    color: vars.$color-text-add;
+    cursor: pointer;
+
+    &::placeholder {
+      color: vars.$color-text-add;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    border: none;
+    padding: 0;
+    background-color: #0F2B41;
+    cursor: pointer;
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__social-link {
+    svg {
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      transform: scale(1.15);
+    }
+  }
+
+  &__bottom {
+    background-color: vars.$color-primary ;
+    padding: 7px 0 9px;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: vars.$color-text-add;
+    font-size: 11px;
+    padding: 0 70px;
+
+  }
+
+  &__bottom-list {
+    display: flex;
+    gap: 37px;
+
+  }
+
+  &__bottom-item+.footer__bottom-item {
+    position: relative;
+
+    &::before {
+      content: '|';
+      position: absolute;
+      left: -21px;
+    }
+  }
+
+  &__address {
+    font-style: normal;
+    line-height: 1.55;
+  }
+}
