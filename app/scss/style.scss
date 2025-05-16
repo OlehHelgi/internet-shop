@@ -146,13 +146,84 @@ body {
   }
 }
 
+.new-collection {
+  &__inner {
+    padding: 139px 0 90px;
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 492px;
+    padding: 75px 40px 0 40px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    color: vars.$color-text-muted;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: auto;
+    font-size: 16px;
+    color: vars.$color-accent;
+    padding: 10px 66px;
+    border: 1px solid vars.$color-accent;
+    align-self: start;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+      background-color: vars.$color-accent;
+      color: vars.$color-text-add;
+    }
+  }
+
+  &__img {
+    padding-top: 75px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__box-img {
+    display: inline-block;
+    position: absolute;
+    max-width: 404px;
+    top: 0;
+    left: -75px;
+  }
+
+  &__caption {
+    margin-top: auto;
+    margin-bottom: 68px;
+    padding: 0 40px;
+    width: 369px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: vars.$color-text-muted;
+  }
+}
 
 .footer {
   background-color: vars.$color-general;
   font-size: 16px;
   color: vars.$color-text-add;
 
-  a:focus {
+  a:focus,
+  a:active,
+  a:hover {
     color: rgba(255, 255, 255, 0.35);
   }
 
