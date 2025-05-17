@@ -180,6 +180,7 @@ body {
     border: 1px solid vars.$color-accent;
     align-self: start;
     transition: all 0.3s ease-in-out;
+
     &:hover,
     &:focus {
       background-color: vars.$color-accent;
@@ -214,6 +215,85 @@ body {
     text-transform: uppercase;
     color: vars.$color-text-muted;
   }
+}
+
+.join-us {
+  background-color: vars.$color-general;
+  padding: 0 152px;
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__img {
+    max-width: 780px;
+  }
+
+  &__box {
+    padding: 94px 0;
+    max-width: 578px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: vars.$color-text-add;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %lora-400;
+    font-size: 30px;
+    color: vars.$color-text-add;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    margin-bottom: 0;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-add;
+    background-color: transparent;
+    @extend %opensans-400;
+    font-size: 20px;
+    color: vars.$color-text-add;
+
+    &::placeholder {
+      color: vars.$color-text-add;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    background-color: vars.$color-accent;
+    color: vars.$color-text-add;
+    cursor: pointer;
+  }
+
+  &__form-capture {
+    font-size: 11px;
+    color: vars.$color-text-add;
+    text-align: center;
+  }
+}
+
+.coll-presentation {
+  padding-top: 90px;
 }
 
 .footer {
@@ -316,7 +396,7 @@ body {
     top: 2px;
     border: none;
     padding: 0;
-    background-color: vars.$color-general;
+    background-color: transparent;
     cursor: pointer;
   }
 
