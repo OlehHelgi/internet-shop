@@ -353,7 +353,6 @@ body {
 
 .our-advantages {
   background-color: vars.$color-general;
-  margin-bottom: 100px;
 
   &__wrapper {
     display: flex;
@@ -393,6 +392,7 @@ body {
     @extend %opensans-400;
     font-size: 20px;
     color: vars.$color-text-add;
+
     &::before {
       content: '';
       position: absolute;
@@ -405,6 +405,76 @@ body {
       top: 50%;
       transform: translateY(-50%);
     }
+  }
+}
+
+.our-blog {
+  padding: 150px 0 90px;
+
+  &__inner {
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 772px auto;
+    gap: 20px;
+  }
+
+  &__content {
+    max-width: 772px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: vars.$color-accent;
+  }
+
+  &__text {
+    max-width: 540px;
+    margin-bottom: 70px;
+    @extend %opensans-400;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+  }
+
+  &__box {}
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__box-link {
+    display: inline-block;
+    margin-bottom: 5px;
+    @extend %lora-400;
+    font-size: 20px;
+    color: vars.$color-text-muted;
+  }
+
+  &__box-date {
+    @extend %opensans-300;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+  }
+
+
+  &__box-img {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px 108px;
+    border: 1px solid vars.$color-accent;
+    border-radius: 3px;
+    @extend %opensans-400;
+    font-size: 16px;
+    color: vars.$color-accent;
+  }
+
+  &__box-date-right {
+    margin-bottom: 86px;
   }
 }
 
