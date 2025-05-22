@@ -20,7 +20,6 @@ body {
   &__link:hover,
   &__link:focus,
   &__link:active {
-    outline: none;
     font-weight: 700;
   }
 }
@@ -58,24 +57,20 @@ body {
     gap: 20px;
   }
 
-  &__actions-link {
-    outline: none;
+  svg {
+    display: block;
+    transition: transform 0.3s ease;
+  }
 
-    svg {
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    &:hover svg,
-    &:focus svg {
-      transform: scale(1.15);
-    }
+  &:hover svg,
+  &:focus svg {
+    transform: scale(1.15);
   }
 }
 
+
 .logo {
   display: inline-block;
-  outline: none;
 }
 
 .menu {
@@ -88,7 +83,6 @@ body {
   &__link {
     display: inline-block;
     position: relative;
-    outline: none;
 
     &::before {
       content: attr(data-text);
@@ -438,8 +432,6 @@ body {
     color: vars.$color-text-muted;
   }
 
-  &__box {}
-
   &__img {
     margin-bottom: 20px;
   }
@@ -471,6 +463,13 @@ body {
     @extend %opensans-400;
     font-size: 16px;
     color: vars.$color-accent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: vars.$color-accent;
+      color: vars.$color-text-add;
+    }
   }
 
   &__box-date-right {
