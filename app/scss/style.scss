@@ -10,6 +10,12 @@ body {
   color: vars.$color-accent;
 }
 
+.section-title {
+  @extend %lora-400;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
 .promo {
   background-color: vars.$color-promo;
   text-transform: uppercase;
@@ -476,6 +482,69 @@ body {
     margin-bottom: 86px;
   }
 }
+
+.appointment {
+  padding: 50px 0 100px;
+
+  &__title {
+    text-align: center;
+    color: vars.$color-accent;
+    margin-bottom: 77px;
+  }
+
+  &__box {
+    display: grid;
+    gap: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__box-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    margin-bottom: 0;
+  }
+
+  &__box-title {
+    @extend %lora-400;
+    text-transform: uppercase;
+    color: vars.$color-text-muted;
+    font-size: 30px;
+    margin-bottom: 80px;
+  }
+
+  &__box-text {
+    @extend %opensans-700;
+    font-size: 20px;
+    color: vars.$color-text-muted;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    @extend %opensans-400;
+    font-size: 20px;
+    color: vars.$color-text-muted;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    &::placeholder {
+      color: vars.$color-text-muted;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+    text-transform: uppercase;
+    color: vars.$color-text-add;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: vars.$color-accent;
+    cursor: pointer;
+  }
+}
+
 
 .footer {
   background-color: vars.$color-general;
