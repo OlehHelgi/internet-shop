@@ -39,6 +39,14 @@ a {
   outline: transparent;
 }
 
+button {
+  appearance: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: transparent;
+}
+
 input,
 button,
 textarea,
