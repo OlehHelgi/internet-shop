@@ -1,5 +1,5 @@
-<!--=include promo.html -->
 <!--=include head.html -->
+<!--=include promo.html -->
 <!--=include header.html -->
 <main class="main">
   <section class="appointment">
@@ -9,10 +9,18 @@
         <form class="appointment__box-form" action="">
           <h2 class="appointment__box-title">Contact information</h2>
           <p class="appointment__box-text">Fill in your contact details</p>
-          <input class="appointment__input" type="text" placeholder="First name">
-          <input class="appointment__input" type="text" placeholder="Last name">
-          <input class="appointment__input" type="email" placeholder="Email">
-          <input class="appointment__input" type="tel" placeholder="Mobile">
+          <label for="first name" aria-label="Enter your first name"></label>
+          <input class="appointment__input" id="first name" type="text" placeholder="First name">
+
+          <label for="last name" aria-label="Enter your last name"></label>
+          <input class="appointment__input" id="last name" type="text" placeholder="Last name">
+
+          <label for="user-email" aria-label="Enter your email"></label>
+          <input class="appointment__input" id="user-email" type="email" placeholder="Email">
+
+          <label for="user-telephon" aria-label="Enter your mobile"></label>
+          <input class="appointment__input" id="user-telephon" type="tel" placeholder="Mobile">
+
           <button class="appointment__btn" type="submit">Send</button>
         </form>
         <picture>
