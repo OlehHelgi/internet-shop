@@ -677,8 +677,6 @@ body {
     }
   }
 
-  &__img {}
-
   &__like {
     position: absolute;
     top: 10px;
@@ -686,7 +684,49 @@ body {
   }
 }
 
+.pagination {
+  padding: 20px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
 
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    font-size: 16px;
+  }
+
+  &__item {}
+
+  &__link {
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link--active {
+    color: vars.$color-text-add;
+    background-color: vars.$color-text-muted;
+  }
+
+  &__arrow {
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--disabled {
+    display: none;
+  }
+}
 
 .footer {
   background-color: vars.$color-general;
