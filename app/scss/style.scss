@@ -16,6 +16,16 @@ body {
   text-transform: uppercase;
 }
 
+.big-btn {
+  display: block;
+  color: vars.$color-text-add;
+  @extend %opensans-400;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  background-color: vars.$color-primary;
+}
+
 .section-link {
   display: inline-block;
   padding: 10px;
@@ -183,14 +193,8 @@ body {
   }
 
   &__link {
-    display: inline-block;
-    color: vars.$color-text-add;
-    @extend %opensans-400;
     font-size: 20px;
-    text-transform: uppercase;
     padding: 13px 39px;
-    border-radius: 3px;
-    background-color: vars.$color-primary;
     align-self: start;
   }
 }
@@ -313,16 +317,10 @@ body {
   }
 
   &__btn {
-    display: block;
     width: 100%;
     padding: 12px;
     margin-top: 40px;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 3px;
-    background-color: vars.$color-accent;
-    color: vars.$color-text-add;
   }
 
   &__form-capture {
@@ -559,11 +557,7 @@ body {
 
   &__btn {
     margin-top: auto;
-    text-transform: uppercase;
-    color: vars.$color-text-add;
     padding: 12px;
-    border-radius: 3px;
-    background-color: vars.$color-accent;
   }
 }
 
