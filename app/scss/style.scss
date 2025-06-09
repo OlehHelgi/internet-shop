@@ -692,8 +692,6 @@ body {
     font-size: 16px;
   }
 
-  &__item {}
-
   &__link {
     width: 43px;
     height: 43px;
@@ -721,6 +719,40 @@ body {
     display: none;
   }
 }
+
+.product {
+  &__inner {}
+
+  &__images {}
+
+  &__content {}
+
+  &__title {}
+
+  &__price {}
+
+  &__list {}
+
+  &__list-term {}
+
+  &__list-description {}
+}
+
+.radio-label {}
+
+.radio-box {}
+
+.radio-style {}
+
+.checkbox-label {}
+
+.checkbox {}
+
+.check-style {}
+
+
+
+
 
 .footer {
   background-color: vars.$color-general;
