@@ -11,17 +11,17 @@
           <picture>
             <source srcset="images/product-1.avif" type="image/avif">
             <source srcset="images/product-1.webp" type="image/webp">
-            <img src="images/product-1.jpg" alt="Alt text">
+            <img src="images/product-1.jpg" alt="White trousers">
           </picture>
           <picture>
             <source srcset="images/product-2.avif" type="image/avif">
             <source srcset="images/product-2.webp" type="image/webp">
-            <img src="images/product-2.jpg" alt="Alt text">
+            <img src="images/product-2.jpg" alt="D. Beckham is sitting on a chair by the pool">
           </picture>
           <picture>
             <source srcset="images/product-3.avif" type="image/avif">
             <source srcset="images/product-3.webp" type="image/webp">
-            <img src="images/product-3.jpg" alt="Alt text">
+            <img src="images/product-3.jpg" alt="White trousers">
           </picture>
         </div>
         <div class="product__content">
@@ -29,8 +29,8 @@
           <p class="product__price">€ 249,00</p>
           <dl class="product__list">
             <dt class="product__list-term">Beckham collection</dt>
-            <dd class="product__list-description">Color</dd>
-            <dd class="product__list-description">
+            <dd class="product__list-term">Color</dd>
+            <dd class="product__list-description product__list-radio">
               <label class="radio-label">
                 <input class="radio-box" type="radio">
                 <span class="radio-style"></span>
@@ -53,7 +53,7 @@
               Pockets bottom back: Welt pocket <br> Partially lined
             </dd>
             <dt class="product__list-term">Size</dt>
-            <dd class="product__list-description">
+            <dd class="product__list-description product__list-checkbox">
               <label class="checkbox-label">
                 <input class="checkbox" type="checkbox">
                 <span class="check-style"></span>
@@ -85,11 +85,101 @@
                 xxl
               </label>
             </dd>
-
           </dl>
+          <div class="product__buttons">
+            <button class="product__btn product__btn-size">
+              <svg width="17" height="16">
+                <use xlink:href="images/sprite.svg#icon-size"></use>
+              </svg>
+              Size guide
+            </button>
+            <button class="product__btn product__btn-favorites">
+              <svg width="16" height="14">
+                <use xlink:href="images/sprite.svg#heart"></use>
+              </svg>
+              Favorites
+            </button>
+            <button class="product__btn product__btn-add">
+              Add to bag
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="accessories">
+    <div class="container">
+      <div class="accessories__inner">
+        <h2 class="section-title accessories__title">Make your look perfect</h2>
+        <div class="accessories__slider">
+          <div class="accessories__wrapper swiper-wrapper">
+
+            <div class="accessories__slide swiper-slide">
+              <picture>
+                <source srcset="images/slide-1.avif" type="image/avif">
+                <source srcset="images/slide-1.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-1.jpg"
+                  alt="D. Beckham is leaning on the glass wall">
+              </picture>
+              <h3 class="accessories__slide-title">Leather trainers</h3>
+              <p class="accessories__slide-price">€ 299,00</p>
+            </div>
+
+            <div class="accessories__slide swiper-slide">
+              <picture>
+                <source srcset="images/slide-2.avif" type="image/avif">
+                <source srcset="images/slide-2.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-2.jpg" alt="D. Backham is wearing a brown coat">
+              </picture>
+              <h3 class="accessories__slide-title">Slim-fit coat in cashmere</h3>
+              <p class="accessories__slide-price">€ 1.700,00</p>
+            </div>
+
+            <div class="accessories__slide swiper-slide">
+              <picture>
+                <source srcset="images/slide-3.avif" type="image/avif">
+                <source srcset="images/slide-3.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-3.jpg" alt="D. Backham is in a blue T-shirt">
+              </picture>
+              <h3 class="accessories__slide-title">T-shirt in soft linen</h3>
+              <p class="accessories__slide-price">€ 139,95</p>
+            </div>
+
+            <div class="accessories__slide swiper-slide">
+              <picture>
+                <source srcset="images/slide-4.avif" type="image/avif">
+                <source srcset="images/slide-4.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-4.jpg" alt="D. Backham is wearing a blue jacket">
+              </picture>
+              <h3 class="accessories__slide-title">Blend jacket</h3>
+              <p class="accessories__slide-price">€ 449,00</p>
+            </div>
+
+            <div class="accessories__slide swiper-slide">
+              <picture>
+                <source srcset="images/slide-5.avif" type="image/avif">
+                <source srcset="images/slide-5.webp" type="image/webp">
+                <img class="accessories__slide-img" src="images/slide-5.jpg" alt="D. Backham is in a pink T-shirt">
+              </picture>
+              <h3 class="accessories__slide-title">T-shirt in cotton</h3>
+              <p class="accessories__slide-price">€ 159,95</p>
+            </div>
+
+          </div>
+          <div class="accessories-slider__arrow arrow-prev">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-slider-prev"></use>
+            </svg>
+          </div>
+          <div class="accessories-slider__arrow arrow-next">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-slider-next"></use>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </main>
 <!--=include footer.html -->
+<!--=include script.html -->

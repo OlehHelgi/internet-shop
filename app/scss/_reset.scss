@@ -9,6 +9,9 @@ html {
 }
 
 body,
+dd,
+dl,
+dt,
 h1,
 h2,
 h3,
@@ -53,6 +56,9 @@ textarea,
 select {
   font: inherit;
   outline: transparent;
+}
+input {
+  border: none;
 }
 
 @media (favors-reduced-motion: reduce) {
