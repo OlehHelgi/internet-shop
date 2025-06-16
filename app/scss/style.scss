@@ -896,10 +896,12 @@
 
 .arrow-prev {
   left: 7px;
+  z-index: 10;
 }
 
 .arrow-next {
   right: 7px;
+  z-index: 10;
 }
 
 .page-404 {
@@ -965,6 +967,25 @@
   }
 
 }
+
+.blog-main {
+  &__inner {
+    padding: 40px 0;
+    border-top: 1px solid rgba(22, 24, 21, 0.2);
+    border-bottom: 1px solid rgba(22, 24, 21, 0.2);
+  }
+
+  &__content {}
+
+  &__category {}
+
+  &__title {}
+
+  &__text {}
+
+  &__link {}
+}
+
 
 .footer {
   background-color: vars.$color-general;
