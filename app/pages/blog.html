@@ -2,17 +2,19 @@
 <!--=include promo.html -->
 <!--=include header.html -->
 <main class="main">
+  <!--=include breadcrumbs-blog.html -->
   <div class="blog-main">
     <div class="container-big">
       <div class="blog-main__inner">
         <picture>
           <source srcset="images/blog-main.avif" type="image/avif">
           <source srcset="images/blog-main.webp" type="image/webp">
-          <img src="images/blog-main.jpg" alt="D. Backham is wearing a brown suit" width="740" height="705">
+          <img class="blog-main__img" src="images/blog-main.jpg" alt="D. Backham is wearing a brown suit" width="740"
+            height="705">
         </picture>
         <div class="blog-main__content">
-          <a class="blog-main__category" href="#">Menswear</a>
-          <h2 class="blog-main__title">
+          <a class="section-link blog-main__category" href="#">Menswear</a>
+          <h2 class="section-title blog-main__title">
             <a href="#">Timeless Elegance: Inside the BOSS x David Beckham Collection</a>
           </h2>
           <p class="blog-main__text">
@@ -20,10 +22,186 @@
             features premium
             fabrics, clean lines, and effortless style — perfect for today’s confident man.
           </p>
-          <a class="blog-main__link" href="#">Read the article</a>
+          <a class="section-link blog-main__link" href="#">Read the article</a>
         </div>
 
       </div>
+    </div>
+  </div>
+  <div class="blog">
+    <div class="container-big">
+      <div class="blog__nav">
+        <h3 class="blog__nav-title">Lates news</h3>
+        <form class="blog__nav-category">
+          <div class="select__wrapper">
+            <select class="select" id="">
+              <option selected>Categories</option>
+              <option value="Modern">Modern</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Fabrics">Fabrics</option>
+              <option value="Menswear">Menswear</option>
+              <option value="Details">Details</option>
+            </select>
+          </div>
+        </form>
+        <search class="search">
+          <form class="search__form">
+            <input class="search__input" type="search" placeholder="search">
+            <button class="search__btn" aria-label="search">
+              <svg width="18" height="18">
+                <use xlink:href="images/sprite.svg#blog-search"></use>
+              </svg>
+            </button>
+          </form>
+        </search>
+        <ul class="blog__nav--btns">
+          <li class="blog__nav--item">
+            <button class="blog__nav--btn" aria-label="view like grid">
+              <svg width="40" height="40">
+                <use xlink:href="images/sprite.svg#blog-grid"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="blog__nav--item">
+            <button class="blog__nav--btn" aria-label="view like list">
+              <svg width="40" height="40">
+                <use xlink:href="images/sprite.svg#blog-lines"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="blog__list">
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-1.avif" type="image/avif">
+              <source srcset="images/blog-img-1.webp" type="image/webp">
+              <img src="images/blog-img-1.jpg" alt="David Beckham’s Touch on BOSS" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Modern</span>
+            <h4 class="blog__list-title">
+              <a href="#">The Art of Modern Tailoring: David Beckham’s Touch on BOSS</a>
+            </h4>
+            <span class="blog__list-date">1 day ago</span>
+          </div>
+        </article>
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-2.avif" type="image/avif">
+              <source srcset="images/blog-img-2.webp" type="image/webp">
+              <img src="images/blog-img-2.jpg" alt="D. Backham and a man" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Collaboration</span>
+            <h4 class="blog__list-title">
+              <a href="#">Why BOSS x Beckham Is Redefining Men's Fashion Staples</a>
+            </h4>
+            <span class="blog__list-date">2 days ago</span>
+          </div>
+        </article>
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-3.avif" type="image/avif">
+              <source srcset="images/blog-img-3.webp" type="image/webp">
+              <img src="images/blog-img-3.jpg" alt="D. Backham is wearing a brown coat" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Fabrics</span>
+            <h4 class="blog__list-title">
+              <a href="#">Premium Fabrics, Effortless Style: A Closer Look at the Collection</a>
+            </h4>
+            <span class="blog__list-date">1 week ago</span>
+          </div>
+        </article>
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-4.avif" type="image/avif">
+              <source srcset="images/blog-img-4.webp" type="image/webp">
+              <img src="images/blog-img-4.jpg" alt="David Beckham and Victoria Beckham" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Menswear</span>
+            <h4 class="blog__list-title">
+              <a href="#">How David Beckham Brings New Energy to Classic Menswear</a>
+            </h4>
+            <span class="blog__list-date">1 week ago</span>
+          </div>
+        </article>
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-5.avif" type="image/avif">
+              <source srcset="images/blog-img-5.webp" type="image/webp">
+              <img src="images/blog-img-5.jpg" alt="D. Backham is in a blue T-shirt" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Details</span>
+            <h4 class="blog__list-title">
+              <a href="#">Luxury in Every Detail: Materials That Make the Difference</a>
+            </h4>
+            <span class="blog__list-date">9 days ago</span>
+          </div>
+        </article>
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-6.avif" type="image/avif">
+              <source srcset="images/blog-img-6.webp" type="image/webp">
+              <img src="images/blog-img-6.jpg" alt="D. Backham is wearing a blue jacket" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Modern</span>
+            <h4 class="blog__list-title">
+              <a href="#">Smart, Sharp, Iconic: Key Pieces from BOSS x Beckham</a>
+            </h4>
+            <span class="blog__list-date">11 days ago</span>
+          </div>
+        </article>
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-7.avif" type="image/avif">
+              <source srcset="images/blog-img-7.webp" type="image/webp">
+              <img src="images/blog-img-7.jpg" alt="Black panties" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Menswear</span>
+            <h4 class="blog__list-title">
+              <a href="#">From Day to Night: Styling the BOSS x David Beckham Line</a>
+            </h4>
+            <span class="blog__list-date">2 weeks ago</span>
+          </div>
+        </article>
+        <article class="blog__list-item">
+          <a class="blog__list-imglink" href="#">
+            <picture>
+              <source srcset="images/blog-img-8.avif" type="image/avif">
+              <source srcset="images/blog-img-8.webp" type="image/webp">
+              <img src="images/blog-img-8.jpg" alt="D. Backham is wearing a brown coat" width="365" height="400">
+            </picture>
+          </a>
+          <div class="blog__list-content">
+            <span class="blog__list-category">Modern</span>
+            <h4 class="blog__list-title">
+              <a href="#">Redefining Modern Masculinity with BOSS and David Beckham</a>
+            </h4>
+            <span class="blog__list-date">2 weeks ago</span>
+          </div>
+        </article>
+      </div>
+      <!--=include pagination.html -->
     </div>
   </div>
 
