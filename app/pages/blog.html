@@ -3,6 +3,7 @@
 <!--=include header.html -->
 <main class="main">
   <!--=include breadcrumbs-blog.html -->
+  <h1 class="visually-hidden">Blog</h1>
   <div class="blog-main">
     <div class="container-big">
       <div class="blog-main__inner">
@@ -33,8 +34,9 @@
       <div class="blog__nav">
         <h3 class="blog__nav-title">Lates news</h3>
         <form class="blog__nav-category">
-          <div class="select__wrapper">
-            <select class="select" id="">
+          <div class="blog__wrapper">
+            <label class="visually-hidden" for="categories">Select a category</label>
+            <select class="select" id="categories">
               <option selected>Categories</option>
               <option value="Modern">Modern</option>
               <option value="Collaboration">Collaboration</option>
@@ -47,23 +49,23 @@
         <search class="search">
           <form class="search__form">
             <input class="search__input" type="search" placeholder="search">
-            <button class="search__btn" aria-label="search">
+            <button class="search__btn" aria-label="search" type="button">
               <svg width="18" height="18">
                 <use xlink:href="images/sprite.svg#blog-search"></use>
               </svg>
             </button>
           </form>
         </search>
-        <ul class="blog__nav--btns">
-          <li class="blog__nav--item">
-            <button class="blog__nav--btn" aria-label="view like grid">
+        <ul class="blog__nav-btns">
+          <li class="blog__nav-item">
+            <button class="blog__nav-btn" aria-label="view like grid" type="button">
               <svg width="40" height="40">
                 <use xlink:href="images/sprite.svg#blog-grid"></use>
               </svg>
             </button>
           </li>
-          <li class="blog__nav--item">
-            <button class="blog__nav--btn" aria-label="view like list">
+          <li class="blog__nav-item">
+            <button class="blog__nav-btn" aria-label="view like list" type="button">
               <svg width="40" height="40">
                 <use xlink:href="images/sprite.svg#blog-lines"></use>
               </svg>

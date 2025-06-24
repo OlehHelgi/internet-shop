@@ -1,11 +1,9 @@
+@use 'vars';
+
 html,
 body {
   height: 100%;
-  font-family: 'OpenSans-Regular';
-  src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+  @extend %opensans-400;
   font-size: 20px;
   line-height: 1.3;
   color: #161515;
@@ -34,11 +32,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Lora-Regular';
-  src: url('../fonts/Lora-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+  @extend %lora-400;
   font-size: 45px;
   text-transform: uppercase;
 }
@@ -51,7 +45,7 @@ body {
   border-radius: 3px;
   font-size: 16px;
   color: #161515;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, outline 0.3s ease-in-out;
 
   &:hover {
     background-color: #161515;
@@ -60,8 +54,6 @@ body {
 
   &:focus {
     outline: 2px solid #161515;
-    font-weight: 500;
-    border: transparent;
   }
 
   &:active {
@@ -74,11 +66,7 @@ body {
 .big-btn {
   display: block;
   color: #ffffff;
-  font-family: 'OpenSans-Regular';
-  src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+  @extend %opensans-400;
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
@@ -87,4 +75,17 @@ body {
 
 .logo {
   display: inline-block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

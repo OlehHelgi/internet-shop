@@ -1,8 +1,8 @@
 @use 'reset';
-@use 'global';
 @use 'fonts';
 @use '../../node_modules/swiper/swiper-bundle.css';
 @use 'vars';
+@use 'global';
 
 .promo {
   background-color: vars.$color-promo;
@@ -543,6 +543,10 @@
     position: absolute;
     left: -10px;
   }
+
+  &__link-product {
+    color: vars.$color-promo;
+  }
 }
 
 .collections {
@@ -634,9 +638,7 @@
 
 .pagination {
   padding: 20px 0 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %dfcc;
   gap: 2px;
 
   &__list {
@@ -650,9 +652,7 @@
     width: 43px;
     height: 43px;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %dfcc;
 
     &--active {
       color: vars.$color-text-add;
@@ -664,13 +664,11 @@
     width: 43px;
     height: 43px;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    @extend %dfcc;
 
-  &--disabled {
-    display: none;
+    &--disabled {
+      display: none;
+    }
   }
 }
 
@@ -747,9 +745,7 @@
   }
 
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %dfcc;
     gap: 10px;
     padding: 6px;
     border: 1px solid vars.$color-text-muted;
@@ -884,10 +880,8 @@
   &__slide-price {
     @extend %opensans-700;
   }
-}
 
-.accessories-slider {
-  &__arrow {
+  &__slider-arrow {
     position: absolute;
     top: 40%;
     cursor: pointer;
@@ -905,11 +899,9 @@
 }
 
 .page-404 {
-  &__container {
-    max-width: 1560px;
-    padding: 71px 10px 0;
-    margin: 0 auto;
-  }
+  max-width: 1560px;
+  padding: 71px 10px 0;
+  margin: 0 auto;
 
   &__inner {
     display: flex;
@@ -921,7 +913,9 @@
   }
 
   &__title {
+    @extend %lora-400;
     font-size: 160px;
+    text-transform: uppercase;
     margin-bottom: 55px;
   }
 
@@ -929,11 +923,25 @@
     display: flex;
     align-items: flex-end;
     gap: 20px;
+    padding: 2px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    @extend %lora-400;
+    text-transform: uppercase;
     font-size: 48px;
 
     span {
       display: inline-block;
       width: 621px;
+    }
+
+    &:focus {
+      border-color: vars.$color-text-muted;
+    }
+
+    &:hover {
+      background-color: vars.$color-promo;
     }
   }
 }
@@ -976,10 +984,8 @@
     color: vars.$color-promo;
   }
 
-  .breadcrumbs__link {
-    &--active {
-      color: vars.$color-accent;
-    }
+  &__link {
+    color: vars.$color-accent;
   }
 }
 
@@ -1057,14 +1063,14 @@
     width: 335px;
   }
 
-  &__nav--btns {
+  &__nav-btns {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-left: 100px;
   }
 
-  &__nav--btn {
+  &__nav-btn {
     padding: 0;
     cursor: pointer;
   }
@@ -1116,22 +1122,22 @@
   border-bottom: 1px solid rgba(22, 24, 21, 0.4);
   opacity: 0.4;
   appearance: none;
+}
 
-  &__wrapper {
-    position: relative;
+.blog__wrapper {
+  position: relative;
 
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url(../images/blog-categories-search.svg);
-      width: 11px;
-      height: 18px;
-      top: 6px;
-      right: 8px;
-    }
-
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/blog-categories-search.svg);
+    width: 11px;
+    height: 18px;
+    top: 6px;
+    right: 8px;
   }
 }
+
 
 .search {
   &__form {
