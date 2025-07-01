@@ -40,3 +40,9 @@ $color-promo: #cdcdcd;
   justify-content: center;
   align-items: center;
 }
+
+%dfsbc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

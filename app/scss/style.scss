@@ -1276,6 +1276,166 @@
   }
 }
 
+.breadcrumbs-reviews {
+  padding: 60px 0;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    color: vars.$color-promo;
+  }
+
+  &__link {
+    color: vars.$color-text-muted;
+  }
+}
+
+.reviews-top {
+  @extend %dfsbc;
+  margin-bottom: 60px;
+
+  &__title {
+    @extend %lora-400;
+    font-size: 64px;
+    line-height: 1.2;
+  }
+
+  &__link {
+    @extend %opensans-400;
+    font-size: 24px;
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+}
+
+.reviews-item {
+  margin-top: 20px;
+  padding: 40px 50px;
+  border: 1px solid rgba(22, 24, 21, 0.15);
+
+  &__date {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.4;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  &__name-img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__text {
+    max-width: 902px;
+    opacity: 0.8;
+  }
+
+  &__images {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.reviews-rating {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    margin-left: 10px;
+    font-size: 16px;
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+}
+
+.reviews-slider {
+  overflow: hidden;
+  width: calc(100vw - (100vw - 1520px)/2);
+  margin-bottom: 25px;
+}
+
+.reviews-nav {
+  position: absolute;
+  max-width: 1520px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.reviews-slider-arrow {
+  position: absolute;
+  top: 24px;
+  cursor: pointer;
+}
+
+.reviews-slider-prev {
+  right: 158px;
+}
+
+.reviews-slider-next {
+  right: 0;
+}
+
+.reviews-slider-pagination {
+  position: absolute;
+  width: auto;
+  right: 59px;
+  left: auto;
+  top: 25px;
+  font-size: 18px;
+  color: rgba($color: vars.$color-accent, $alpha: 0.3);
+}
+
+.swiper-pagination-current {
+  padding-right: 16px;
+  color: vars.$color-accent;
+}
+
+.swiper-pagination-total {
+  padding-left: 16px;
+}
+
+.pagination-reviews {
+  padding: 60px 0;
+}
+
+.reviews-new {
+  display: inline-block;
+  padding: 24px 216px;
+  margin-top: 24px;
+  margin-bottom: 60px;
+  border: 1px solid vars.$color-accent;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+
 
 .footer {
   background-color: vars.$color-general;
