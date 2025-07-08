@@ -1,0 +1,334 @@
+<!--=include head.html -->
+<!--=include promo.html -->
+<!--=include header.html -->
+<main class="main">
+  <!--=include breadcrumbs-catalog.html -->
+  <section class="catalog">
+    <div class="container">
+      <div class="catalog__top">
+        <div class="catalog__view-mode">
+          <span>View as</span>
+          <ul class="view-mode">
+            <li class="view-mode__item">
+              <button class="view-mode__btn view-mode__btn--grid active" type="button" aria-label="View like grid">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#catalog-grid"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="view-mode__item">
+              <button class="view-mode__btn view-mode__btn--list" type="button" aria-label="View like list">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#catalog-list"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <h1 class="section-title catalog__title">Beckham collection</h1>
+        <div class="catalog__sort">
+          <form class="catalog__sort-form">
+            <div class="catalog__sort-wrapper">
+              <label class="visually-hidden" for="sort">Select sorting method</label>
+              <select class="catalog__sort-select" id="sort">
+                <option value="popularity" selected>Sort by popularity</option>
+                <option value="price">Price</option>
+                <option value="size">Size</option>
+                <option value="color">Color</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="catalog__content">
+        <aside class="catalog__filter">
+          <form class="catalog__filter-form">
+            <div class="catalog__filterbox">
+              <h2 class="catalog__filterbox-title">Price</h2>
+              <div class="catalog__filterbox-itemrange">
+                <div class="range">
+                  <div class="range__inputs">
+                    <label class="range__label" for="price-range-min">
+                      <input class="range__min" type="number" id="price-range-min" min="300" max="3000" step="100">
+                    </label>
+                    <span>-</span>
+                    <label class="range__label" for="price-range-max">
+                      <input class="range__max" type="number" id="price-range-max" min="300" max="3000" step="100">
+                    </label>
+                  </div>
+                  <div class="range__slider"></div>
+                  <ul class="range__list">
+                    <li>300</li>
+                    <li>1,000</li>
+                    <li>1,500</li>
+                    <li>2,000</li>
+                    <li>2,500</li>
+                    <li>3,000</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <h2 class="catalog__filterbox-title">Size</h2>
+              <div class="catalog__filterbox-items">
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="xs">
+                  <span class="check-style"></span>
+                  xs
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="s">
+                  <span class="check-style"></span>
+                  s
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="m">
+                  <span class="check-style"></span>
+                  m
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="l">
+                  <span class="check-style"></span>
+                  l
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="xl">
+                  <span class="check-style"></span>
+                  xl
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="xxl">
+                  <span class="check-style"></span>
+                  xxl
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <h2 class="catalog__filterbox-title">Color</h2>
+              <div class="catalog__filterbox-items">
+                <label class="radio-label">
+                  <input class="radio-box" type="radio" name="color" value="white" checked>
+                  <span class="radio-style"></span>
+                  white
+                </label>
+                <label class="radio-label">
+                  <input class="radio-box" type="radio" name="color" value="blue">
+                  <span class="radio-style"></span>
+                  blue
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <h2 class="catalog__filterbox-title">Material</h2>
+              <div class="catalog__filterbox-items">
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Wool">
+                  <span class="check-style"></span>
+                  Wool
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Cotton">
+                  <span class="check-style"></span>
+                  Cotton
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Leather">
+                  <span class="check-style"></span>
+                  Leather
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Jersey">
+                  <span class="check-style"></span>
+                  Jersey
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Linen">
+                  <span class="check-style"></span>
+                  Linen
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Cashmere">
+                  <span class="check-style"></span>
+                  Cashmere
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <h2 class="catalog__filterbox-title">Style</h2>
+              <div class="catalog__filterbox-itemline">
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="All">
+                  <span class="check-style"></span>
+                  <span>All</span>
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Boho">
+                  <span class="check-style"></span>
+                  Boho
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Romantic">
+                  <span class="check-style"></span>
+                  Romantic
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Elegant">
+                  <span class="check-style"></span>
+                  Elegant
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Vintage">
+                  <span class="check-style"></span>
+                  Vintage
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Simple">
+                  <span class="check-style"></span>
+                  Simple
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Modern">
+                  <span class="check-style"></span>
+                  Modern
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Formal">
+                  <span class="check-style"></span>
+                  Formal
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Glamorous">
+                  <span class="check-style"></span>
+                  Glamorous
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Modest">
+                  <span class="check-style"></span>
+                  Modest
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Casual">
+                  <span class="check-style"></span>
+                  Casual
+                </label>
+                <label class="checkbox-label">
+                  <input class="checkbox" type="checkbox" name="Beach">
+                  <span class="check-style"></span>
+                  Beach
+                </label>
+              </div>
+            </div>
+            <button class="catalog__filterbox-clean" type="button">clean all</button>
+          </form>
+        </aside>
+        <div class="catalog__content-box">
+          <div class="catalog__content-items view-mode__container view-mode__container--grid">
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-1.avif" type="image/avif">
+                <source srcset="images/catalog-1.webp" type="image/webp">
+                <img src="images/catalog-1.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-2.avif" type="image/avif">
+                <source srcset="images/catalog-2.webp" type="image/webp">
+                <img src="images/catalog-2.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-3.avif" type="image/avif">
+                <source srcset="images/catalog-3.webp" type="image/webp">
+                <img src="images/catalog-3.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-4.avif" type="image/avif">
+                <source srcset="images/catalog-4.webp" type="image/webp">
+                <img src="images/catalog-4.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-5.avif" type="image/avif">
+                <source srcset="images/catalog-5.webp" type="image/webp">
+                <img src="images/catalog-5.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-6.avif" type="image/avif">
+                <source srcset="images/catalog-6.webp" type="image/webp">
+                <img src="images/catalog-6.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-7.avif" type="image/avif">
+                <source srcset="images/catalog-7.webp" type="image/webp">
+                <img src="images/catalog-7.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-8.avif" type="image/avif">
+                <source srcset="images/catalog-8.webp" type="image/webp">
+                <img src="images/catalog-8.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-9.avif" type="image/avif">
+                <source srcset="images/catalog-9.webp" type="image/webp">
+                <img src="images/catalog-9.jpg" alt="Alt text" width="270" height="400">
+              </picture>
+              <div class="catalog__content-itembox">
+                <h3 class="catalog__content-name">Leather trainers</h3>
+                <p class="catalog__content-price"><span>€</span> 299,00</p>
+              </div>
+            </div>
+          </div>
+          <!--=include pagination.html -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+<!--=include footer.html -->
+<!--=include script.html -->
