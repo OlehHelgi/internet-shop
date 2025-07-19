@@ -1,0 +1,203 @@
+<!--=include head.html -->
+<!--=include promo.html -->
+<!--=include header.html -->
+<main class="main">
+  <section class="checkout">
+    <div class="container-big">
+      <div class="checkout__top">
+        <h1 class="checkout__title">Checkout</h1>
+        <svg width="94" height="18">
+          <use xlink:href="images/sprite.svg#checkout-decor"></use>
+        </svg>
+      </div>
+      <div class="checkout__content">
+        <div class="checkout__info">
+          <form class="checkout__info-form" action="">
+            <div class="checkout__info-item">
+              <h2 class="checkout__info-title">Personal information</h2>
+              <div class="checkout__infobox">
+                <label class="checkout__infobox-label" for="name">Your name
+                  <input class="checkout__infobox-input" id="name" type="text" placeholder="Enter your name">
+                </label>
+                <label class="checkout__infobox-label" for="last-name">Your Last Name*
+                  <input class="checkout__infobox-input" id="last-name" type="text" placeholder="Enter your last name"
+                    required>
+                </label>
+                <label class="checkout__infobox-label" for="phone">Phone*
+                  <input class="checkout__infobox-input" id="phone" type="text" placeholder="+38(___)___-__-__"
+                    required>
+                </label>
+                <label class="checkout__infobox-label" for="email">Email*
+                  <input class="checkout__infobox-input" id="email" type="text" placeholder="Enter your email" required>
+                </label>
+              </div>
+            </div>
+            <div class="checkout__info-item">
+              <h2 class="checkout__info-title">Delivery address</h2>
+              <div class="checkout__infobox">
+                <label class="checkout__infobox-label checkout__infobox-selectwrapp checkout__infobox-select-marker"
+                  for="city">City*
+                  <select class="checkout__infobox-select" name="select city" id="city" required>
+                    <option value="" selected>Select city</option>
+                  </select>
+                </label>
+                <label class="checkout__infobox-label checkout__infobox-selectwrapp checkout__infobox-select-arrow"
+                  for="country">Country*
+                  <select class="checkout__infobox-select" name="select country" id="country" required>
+                    <option value="" selected>Select country</option>
+                  </select>
+                </label>
+                <label class="checkout__infobox-label" for="postal-code">Postal code*
+                  <input class="checkout__infobox-input" type="text" id="postal-code"
+                    placeholder="Enter your postal code" required>
+                </label>
+                <label class="checkout__infobox-label" for="address">Street name, house*
+                  <input class="checkout__infobox-input" type="text" id="address" placeholder="Enter address" required>
+                </label>
+              </div>
+            </div>
+            <div class="checkout__info-item">
+              <h2 class="checkout__info-title">Delivery method</h2>
+              <p class="checkout__info-deltext">Select delivery method*</p>
+              <div class="checkout__info-delbox">
+                <div class="checkout__info-radio">
+                  <label class="radio-label">
+                    <input class="radio-box" type="radio" name="delivery" checked>
+                    <span class="radio-style"></span>
+                    <span class="radio-name">Nova Poshta</span>
+                    <span class="radio-text">Delivery will take 2-7 days</span>
+                  </label>
+                  <p class="checkout__info-delprice">Free</p>
+                </div>
+                <div class="checkout__info-radio">
+                  <label class="radio-label">
+                    <input class="radio-box" type="radio" name="delivery">
+                    <span class="radio-style"></span>
+                    <span class="radio-name">Nova Poshta (home delivery)</span>
+                    <span class="radio-text">Delivery will take 2-7 days</span>
+                  </label>
+                  <p class="checkout__info-delprice"><span>€</span>20</p>
+                </div>
+              </div>
+              <div class="checkout__info-item">
+                <h2 class="checkout__info-title">Payment</h2>
+                <div class="checkout__infobox-pay">
+                  <label class="checkout__infobox-label" for="card-number">Your card number*
+                    <input class="checkout__infobox-input" type="text" id="card-number"
+                      placeholder="0000 0000 0000 0000">
+                  </label>
+                  <div class="checkout__info-paycard">
+                    <label class="checkout__infobox-label" for="period">Validity period*
+                      <input class="checkout__infobox-input" id="period" type="text" placeholder="ММ/YY" required>
+                    </label>
+                    <label class="checkout__infobox-label" for="code">Code*
+                      <input class="checkout__infobox-input" type="text" id="code" placeholder="000" required>
+                    </label>
+                  </div>
+                  <label class="checkout__infobox-label" for="holder-name">Holder name*
+                    <input class="checkout__infobox-input" type="text" id="holder-name" placeholder="Jane Brown"
+                      required>
+                  </label>
+                </div>
+              </div>
+              <p class="checkout__info-text">By clicking the "Place an order" button, you agree to the privacy policy
+                and user agreement</p>
+              <button class="big-btn checkout__info-btn" type="submit">Place an order</button>
+            </div>
+          </form>
+        </div>
+        <div class="checkout__details">
+          <h2 class="checkout__details-title">Order details</h2>
+          <div class="checkout__details-items">
+            <div class="checkout__details-itemsline">
+              <p class="checkout__details-quantity">2 items in bag</p>
+              <button class="checkout__details-del" type="button">
+                <svg width="18" height="18">
+                  <use xlink:href="images/sprite.svg#order-del"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-1.avif" type="image/avif">
+                <source srcset="images/order-1.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-1.jpg" alt="Alt text">
+              </picture>
+              <div class="checkout__item-box">
+                <h3 class="checkout__item-title">Trousers in cotton</h3>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Size:</dt>
+                    <dd class="checkout__item-definition">m</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Color:</dt>
+                    <dd class="checkout__item-definition">White</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition"><span>€</span> 249,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del" type="button">
+                  <svg width="16" height="20">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="checkout__item">
+              <picture>
+                <source srcset="images/order-2.avif" type="image/avif">
+                <source srcset="images/order-2.webp" type="image/webp">
+                <img class="checkout__item-img" src="images/order-2.jpg" alt="Alt text">
+              </picture>
+              <div class="checkout__item-box">
+                <h3 class="checkout__item-title">Leather trainers</h3>
+                <dl class="checkout__item-list">
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Size:</dt>
+                    <dd class="checkout__item-definition">43</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Color:</dt>
+                    <dd class="checkout__item-definition">White</dd>
+                  </div>
+                  <div class="checkout__item-listbox">
+                    <dt class="checkout__item-term">Item subtotal:</dt>
+                    <dd class="checkout__item-definition"><span>€</span> 299,00</dd>
+                  </div>
+                </dl>
+                <button class="checkout__item-del" type="button">
+                  <svg width="16" height="20">
+                    <use xlink:href="images/sprite.svg#item-del"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order">
+            <h3 class="order__title">Your order</h3>
+            <dl class="order__list">
+              <div class="order__list-box">
+                <dt class="order__list-term">Subtotal:</dt>
+                <dd class="order__list-definition"><span>€</span> 548,00</dd>
+              </div>
+              <div class="order__list-box">
+                <dt class="order__list-term">Shipping:</dt>
+                <dd class="order__list-definition">Free</dd>
+              </div>
+              <div class="order__list-box">
+                <dt class="order__list-term">Total:</dt>
+                <dd class="order__list-definition"><span>€</span> 548,00</dd>
+              </div>
+            </dl>
+            <a class="section-link order-change" href="#">Change items</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html -->
+<!--=include script.html -->
