@@ -1,0 +1,15 @@
+@media (max-width: 1000px) {
+  .footer {
+    &__elements {
+      flex-wrap: wrap;
+      gap: 30px 35px;
+    }
+
+    &__element-title {
+      display: none;
+
+    }
+
+
+  }
+}

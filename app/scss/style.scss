@@ -4,6 +4,7 @@
 @use '../../node_modules/nouislider/dist/nouislider.css';
 @use 'vars';
 @use 'global';
+@use 'media';
 
 .promo {
   background-color: vars.$color-promo;
