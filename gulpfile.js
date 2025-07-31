@@ -4,7 +4,7 @@ const browserSync = require('browser-sync').create();
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
 const clean = require('gulp-clean');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -13,6 +13,8 @@ const newer = require('gulp-newer');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
 const svgstore = require('gulp-svgstore');
+const postcss = require('gulp-postcss');
+const sortMediaQueries = require('postcss-sort-media-queries');
 
 function sprites() {
   return src('app/images/sprite/*.svg')
@@ -58,7 +60,15 @@ function styles() {
       style: 'compressed'
     }))
     .pipe(concat('style.min.css'))
-    .pipe(autoprefixer())
+    .pipe(postcss([
+      autoprefixer({
+        overrideBrowserslist: ['last 10 version'],
+        grid: true
+      }),
+      sortMediaQueries({
+        sort: 'desktop-first'
+      })
+    ]))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
@@ -97,7 +107,7 @@ function building() {
     'app/js/main.min.js',
     'app/*.html'
   ], { base: 'app' })
-  .pipe(dest('dist'))
+    .pipe(dest('dist'))
 }
 
 function cleanDist() {

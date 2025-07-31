@@ -57,6 +57,7 @@
 
   &__lang {
     display: flex;
+    margin-right: 172px;
 
     &--active {
       @extend %opensans-700;
@@ -87,10 +88,14 @@
 
 
 .menu {
+  display: flex;
   &__list {
     display: flex;
     align-items: center;
     gap: 30px;
+  }
+  &__btn {
+    display: none;
   }
 
   &__link {

@@ -1,3 +1,10 @@
+const menuBtn = document.querySelector('.menu__btn');
+const menu = document.querySelector('.menu');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('menu--active');
+})
+
 const viewList = document.querySelector('.view-mode__btn--list');
 const viewGrid = document.querySelector('.view-mode__btn--grid');
 const viewContainer = document.querySelector('.view-mode__container');
