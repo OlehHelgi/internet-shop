@@ -89,11 +89,13 @@
 
 .menu {
   display: flex;
+
   &__list {
     display: flex;
     align-items: center;
     gap: 30px;
   }
+
   &__btn {
     display: none;
   }
@@ -220,7 +222,6 @@
 }
 
 .join-us {
-  min-width: 1600px;
   padding: 0 152px;
 
   &__inner {
@@ -232,12 +233,14 @@
   &__img {
     max-width: 780px;
     width: 100%;
+    object-fit: cover;
   }
 
   &__box {
     padding: 94px 0;
     max-width: 578px;
     width: 100%;
+    padding-right: 20px;
   }
 
   &__title {
